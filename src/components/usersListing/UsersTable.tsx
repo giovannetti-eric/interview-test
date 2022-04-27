@@ -19,7 +19,7 @@ const UsersTable: FC<Props> = ({ users, sortColumn, onSort }) => {
     return <div className="p-8 text-center opacity-60">No users found</div>;
   }
 
-  // todo: transform this table into a reuzable dumb component
+  // todo: transform this table into a reusable dumb component
   return (
     <table className="w-full table-fixed">
       <thead>
