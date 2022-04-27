@@ -3,9 +3,6 @@
   "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended", "prettier", "plugin:prettier/recommended"],
   "rules": {
     "prettier/prettier": "warn",
-    "import/first": ["error", "absolute-first"],
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "off",
     "@typescript-eslint/no-explicit-any": "off"
   },
   "env": {
