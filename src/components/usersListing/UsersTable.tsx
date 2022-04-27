@@ -42,7 +42,7 @@ const UsersTable: FC<Props> = ({ users, sortColumn, onSort }) => {
               <img
                 className={classnames('opacity-30 group-hover:opacity-100', sortColumn === 'age' ? 'opacity-100' : '')}
                 src="/sort-arrows.svg"
-                alt="Sort by name"
+                alt="Sort by age"
                 width="10"
                 height="10"
               />
