@@ -17,18 +17,14 @@ const NumberSelector: FC<Props> = ({ label, name, value, onChange }) => {
   };
 
   return (
-    <div className="flex items-center gap-4 px-4 py-1 border border-gray-300 rounded-md">
-      <label htmlFor={`${name}-${id}`} className="opacity-50 min-w-[4rem]">
+    <div className="relative">
+      <label
+        htmlFor={`${name}-${id}`}
+        className="absolute w-24 text-lg -translate-y-1/2 opacity-50 left-4 top-1/2 text-ellipsis"
+      >
         {label}
       </label>
-      <input
-        id={`${name}-${id}`}
-        name={name}
-        value={value}
-        type="number"
-        className="bg-transparent border-none"
-        onChange={handleChange}
-      />
+      <input id={`${name}-${id}`} name={name} value={value} type="number" className="pl-28" onChange={handleChange} />
     </div>
   );
 };

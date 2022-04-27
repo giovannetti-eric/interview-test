@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  [type='color'],
+  [type='date'],
+  [type='email'],
+  [type='number'],
+  [type='password'],
+  [type='search'],
+  [type='tel'],
+  [type='text'],
+  [type='url'],
+  textarea,
+  select {
+    @apply p-4 pb-3 border border-gray-200 rounded-xl placeholder:text-lg placeholder:opacity-60;
+  }
+}
