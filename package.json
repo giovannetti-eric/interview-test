@@ -12,20 +12,20 @@
     "start:server": "node server/server.js"
   },
   "dependencies": {
-    "faker": "^4.1.0",
-    "fastify": "^2.14.1",
-    "fastify-cors": "^3.0.3",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1",
-    "styled-components": "^5.1.1",
-    "typescript": "^3.9.5"
+    "@faker-js/faker": "^6.2.0",
+    "fastify": "^3.28.0",
+    "fastify-cors": "^6.0.3",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-scripts": "5.0.1",
+    "styled-components": "^5.3.5",
+    "typescript": "^4.6.3"
   },
   "devDependencies": {
-    "@types/node": "^14.0.11",
-    "@types/react": "^16.9.35",
-    "@types/react-dom": "^16.9.8",
-    "@types/styled-components": "^5.1.0",
+    "@types/node": "^17.0.29",
+    "@types/react": "^18.0.8",
+    "@types/react-dom": "^18.0.0",
+    "@types/styled-components": "^5.1.25",
     "npm-run-all": "^4.1.5"
   },
   "eslintConfig": {

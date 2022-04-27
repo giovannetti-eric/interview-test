@@ -1,5 +1,5 @@
 const fastify = require('fastify');
-const faker = require('faker');
+const { faker } = require('@faker-js/faker');
 const cors = require('fastify-cors')
 
 const PORT = 8099;
