@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import UserRow from './UserRow';
 import { Users } from '../../types/usersType';
 import classnames from '../../lib/helpers';
 
@@ -24,6 +25,9 @@ const UsersTable: FC<Props> = ({ users, sortColumn, onSort }) => {
     <table className="w-full table-fixed">
       <thead>
         <tr>
+          <th className="w-12 py-1 pl-8">
+            <span className="sr-only">Selection</span>
+          </th>
           <th className="px-8 py-4 text-lg text-left text-semibold">
             <button type="button" className="flex items-center gap-2 group" onClick={() => handleSort('name')}>
               Name
@@ -52,12 +56,7 @@ const UsersTable: FC<Props> = ({ users, sortColumn, onSort }) => {
       </thead>
       <tbody>
         {users.map((user) => (
-          <tr key={user.email} className="border-t first:border-t-0">
-            <td className="px-8 py-4 text-lg">
-              {user.name.firstName} {user.name.lastName}
-            </td>
-            <td className="px-8 py-4 text-lg">{user.age}</td>
-          </tr>
+          <UserRow key={user.email} user={user} />
         ))}
       </tbody>
     </table>

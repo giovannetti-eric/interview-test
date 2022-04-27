@@ -16,4 +16,8 @@
   select {
     @apply p-4 pb-3 border border-gray-200 rounded-xl placeholder:text-lg placeholder:opacity-60;
   }
+
+  [type='checkbox'] {
+    @apply rounded border-gray-300;
+  }
 }
