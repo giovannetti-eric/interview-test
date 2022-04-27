@@ -3,33 +3,45 @@
   "version": "0.1.0",
   "private": true,
   "engines": {
-    "node": ">=12.16",
-    "npm": ">=6.14.4"
+    "node": ">=16.13",
+    "npm": ">=8.1.2"
   },
   "scripts": {
     "start": "npm-run-all --parallel start:client start:server",
     "start:client": "react-scripts start",
-    "start:server": "node server/server.js"
+    "start:server": "node server/server.js",
+    "lint": "eslint . --ext .js,.ts,.tsx",
+    "lint:fix": "eslint . --ext .js,.ts,.tsx --fix"
   },
   "dependencies": {
     "@faker-js/faker": "^6.2.0",
+    "@tailwindcss/forms": "^0.5.0",
     "fastify": "^3.28.0",
     "fastify-cors": "^6.0.3",
+    "lodash-es": "^4.17.21",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-scripts": "5.0.1",
-    "styled-components": "^5.3.5",
+    "tailwindcss": "^3.0.24",
     "typescript": "^4.6.3"
   },
   "devDependencies": {
     "@types/node": "^17.0.29",
     "@types/react": "^18.0.8",
     "@types/react-dom": "^18.0.0",
-    "@types/styled-components": "^5.1.25",
-    "npm-run-all": "^4.1.5"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
+    "@typescript-eslint/eslint-plugin": "^5.21.0",
+    "@typescript-eslint/parser": "^5.21.0",
+    "autoprefixer": "^10.4.5",
+    "cssnano": "^5.1.7",
+    "eslint": "^8.14.0",
+    "eslint-config-next": "^12.1.5",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "npm-run-all": "^4.1.5",
+    "postcss-import": "^14.1.0",
+    "postcss-nesting": "^10.1.4",
+    "postcss-sorting": "^7.0.1",
+    "prettier": "^2.6.2"
   },
   "browserslist": {
     "production": [
