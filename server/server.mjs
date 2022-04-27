@@ -1,6 +1,6 @@
-const fastify = require('fastify');
-const { faker } = require('@faker-js/faker');
-const cors = require('fastify-cors')
+import fastify from 'fastify';
+import { faker } from '@faker-js/faker';
+import cors from 'fastify-cors';
 
 const PORT = 8099;
 const server = fastify({ logger: true });
@@ -16,7 +16,7 @@ function createUser(minAge, maxAge) {
       firstName: faker.name.firstName(),
       lastName: faker.name.lastName(),
     },
-  }
+  };
 }
 
 function createUsers(minAge, maxAge, limit) {
@@ -26,10 +26,10 @@ function createUsers(minAge, maxAge, limit) {
     users.push(createUser(minAge, maxAge));
   }
 
-  const duplicatedUser = createUser(minAge, maxAge)
-  duplicatedUser.name.firstName = 'Bob'
-  duplicatedUser.name.lastName = 'Bissonnette'
-  users.push(duplicatedUser)
+  const duplicatedUser = createUser(minAge, maxAge);
+  duplicatedUser.name.firstName = 'Bob';
+  duplicatedUser.name.lastName = 'Bissonnette';
+  users.push(duplicatedUser);
 
   return users;
 }

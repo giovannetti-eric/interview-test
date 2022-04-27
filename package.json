@@ -9,7 +9,7 @@
   "scripts": {
     "start": "npm-run-all --parallel start:client start:server",
     "start:client": "react-scripts start",
-    "start:server": "node server/server.js",
+    "start:server": "node server/server.mjs",
     "lint": "eslint . --ext .js,.ts,.tsx",
     "lint:fix": "eslint . --ext .js,.ts,.tsx --fix"
   },
