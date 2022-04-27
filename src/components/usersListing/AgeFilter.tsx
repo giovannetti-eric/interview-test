@@ -49,16 +49,17 @@ const AgeFilter: FC<Props> = ({ defaultMinAge, defaultMaxAge, onSubmit }) => {
             value={values.minAge}
             onChange={(value) => setFieldValue('minAge', Number(value))}
           />
+          <ErrorMessage className="text-sm text-left text-red-500" name="minAge" component="div" aria-live="polite" />
           <NumberSelector
             label="Age Max"
             name="maxAge"
             value={values.maxAge}
             onChange={(value) => setFieldValue('maxAge', Number(value))}
           />
+          <ErrorMessage className="text-sm text-left text-red-500" name="maxAge" component="div" aria-live="polite" />
           <Button type="submit" disabled={isSubmitting}>
             Retrieve users
           </Button>
-          <ErrorMessage className="text-sm text-left text-red-500" name="email" component="div" aria-live="polite" />
         </Form>
       )}
     </Formik>
