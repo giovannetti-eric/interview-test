@@ -20,7 +20,7 @@ const UsersTable: FC<Props> = ({ users, sortColumn, onSort }) => {
     return <div className="p-8 text-center opacity-60">No users found</div>;
   }
 
-  // todo: transform this table into a reuzable dumb component
+  // todo: transform this table into a reusable dumb component
   return (
     <table className="w-full table-fixed">
       <thead>
@@ -46,7 +46,7 @@ const UsersTable: FC<Props> = ({ users, sortColumn, onSort }) => {
               <img
                 className={classnames('opacity-30 group-hover:opacity-100', sortColumn === 'age' ? 'opacity-100' : '')}
                 src="/sort-arrows.svg"
-                alt="Sort by name"
+                alt="Sort by age"
                 width="10"
                 height="10"
               />
