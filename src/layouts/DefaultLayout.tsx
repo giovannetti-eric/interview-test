@@ -11,7 +11,7 @@ const DefaultLayout: FC<Props> = ({ title, children }) => {
     <>
       <MainHeader />
       <main className="max-w-screen-xl p-16 mx-auto">
-        <h1 className="mb-8 text-3xl font-bold">{title}</h1>
+        <h1 className="mb-8 text-3xl font-semibold">{title}</h1>
         {children}
       </main>
     </>

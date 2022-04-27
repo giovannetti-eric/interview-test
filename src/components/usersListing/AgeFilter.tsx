@@ -5,6 +5,8 @@ import NumberSelector from '../inputs/NumberSelector';
 import Button from '../inputs/Button';
 
 interface Props {
+  defaultMinAge: number;
+  defaultMaxAge: number;
   onSubmit: (values: any) => void;
 }
 
@@ -13,15 +15,15 @@ export interface FormValues {
   maxAge: number;
 }
 
-const AgeFilter: FC<Props> = ({ onSubmit }) => {
+const AgeFilter: FC<Props> = ({ defaultMinAge, defaultMaxAge, onSubmit }) => {
   const validationSchema = Yup.object().shape({
     minAge: Yup.number().required('Number required'),
     maxAge: Yup.number().required('Number required'),
   });
 
   const initialValues: FormValues = {
-    minAge: 0,
-    maxAge: 100,
+    minAge: defaultMinAge,
+    maxAge: defaultMaxAge,
   };
 
   const handleSubmit = (values) => {

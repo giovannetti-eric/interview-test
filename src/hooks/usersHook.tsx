@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import useSWR from 'swr';
-import { sortBy } from 'lodash-es';
 import { Users } from '../types/usersType';
 
 // todo: move into a .env file
@@ -78,8 +77,7 @@ export function useUsers(): {
 
   useEffect(() => {
     if (!isLoading) {
-      const sortedUsers = sortBy([...kids, ...adults, ...seniors], ['name.firstName', 'name.lastName', 'age']);
-      setUsers(sortedUsers);
+      setUsers([...kids, ...adults, ...seniors]);
     }
   }, [isLoading, kids, adults, seniors]);
 
